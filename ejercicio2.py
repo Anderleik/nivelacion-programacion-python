@@ -24,7 +24,28 @@ print("\n" + "=" * 60)
 print("EJERCICIO 2: Clasificador de prioridad")
 print("=" * 60)
  
-usuarios_afectados = 15          # cambia este valor para probar distintos casos
+usuarios_afectados = 55         # cambia este valor para probar distintos casos
 sistema_afectado = "VPN"         # cambia este valor para probar el reto extra
  
 # TU CÓDIGO AQUÍ
+if usuarios_afectados == 1:
+    prioridad = "Baja"
+elif usuarios_afectados >= 2 and usuarios_afectados <= 10:
+    prioridad = "Media"
+elif usuarios_afectados >= 11 and usuarios_afectados <= 50:
+    prioridad = "Alta"
+elif usuarios_afectados > 50:
+    prioridad = "Crítica"
+else:
+    prioridad = "Número de usuarios no válido"
+
+if sistema_afectado == "VPN" or sistema_afectado == "correo":
+    if prioridad == "Baja":
+        prioridad = "Media"
+    elif prioridad == "Media":
+        prioridad = "Alta"
+
+print(f"Prioridad {prioridad}")
+
+if prioridad == "Crítica":
+    print("Prioridad critica: Escalar a nivel 2")

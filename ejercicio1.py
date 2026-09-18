@@ -21,3 +21,15 @@ print("EJERCICIO 1: Ticket de soporte")
 print("=" * 60)
  
 # TU CÓDIGO AQUÍ
+id_ticket = 4521
+categoria = "Hardware"
+prioridad = "Alta"
+minutos_estimados = 30
+hora_inicio = 14
+
+print(f"Ticket #{id_ticket} | Categoría: {categoria} | Prioridad: {prioridad} | Tiempo estimado: {minutos_estimados} min")
+
+# RETO EXTRA:
+hora_fin = hora_inicio + (minutos_estimados // 60)
+minutos_fin = minutos_estimados % 60
+print(f"El ticket se resolvería aproximadamente a las {hora_fin}:{minutos_fin:02d}")

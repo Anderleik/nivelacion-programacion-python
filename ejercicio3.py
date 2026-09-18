@@ -29,3 +29,12 @@ tickets_pendientes = [
 ]
  
 # TU CÓDIGO AQUÍ
+tiempo_acumulado = 0
+
+for ticket in tickets_pendientes:
+    tiempo_acumulado += ticket["minutos"]
+    print(f"Ticket ID: {ticket['id']}, Minutos estimados: {ticket['minutos']}")
+    
+    if tiempo_acumulado > 480:
+        print("Tiempo acumulado excede 480 minutos. Deteniendo procesamiento.")
+        break
